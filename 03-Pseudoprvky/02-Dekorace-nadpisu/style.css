@@ -4,6 +4,85 @@ html { box-sizing: border-box; }
 
 body {
 	font: 16px/1.5 sans-serif;
+	margin: 50px;
 }
 
 /*************************************************/
+
+.hlavni::after {
+	content: "";
+	display: block;
+	width: 150px;
+	height: 3px;
+	background-image: linear-gradient(to right, magenta, cyan);
+}
+
+.prvni {
+	text-align: center;
+}
+
+.prvni::before,
+.prvni::after {
+	display: block;
+	content: "";
+	height: 30px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+.prvni::after {
+	background-image: url(images/flourish-bottom.png);
+}
+
+.prvni::before {
+	background-image: url(images/flourish-top.png);
+}
+
+
+
+.druhy::before,
+.druhy::after {
+	display: inline-block;
+	width: 2em;
+	height: 0.8em;
+	content: "";
+	height: 30px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+.druhy::after {
+	background-image: url(images/swirl-right.png);
+	margin-left: 15px;
+}
+
+.druhy::before {
+	background-image: url(images/swirl-left.png);
+	margin-right: 15px;
+}
+
+.druhy {
+	text-align: center;
+}
+
+.treti::before {
+	content: "";
+	display: block;
+	width: 100px;
+	height: 100px;
+	background-image: linear-gradient(to top right, yellow, orange);
+	position: absolute;
+	top: -16px;
+	left: -25px;
+
+	transform: rotate(45deg);
+	z-index: -999;
+}
+
+.treti {
+	position: relative;
+}

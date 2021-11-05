@@ -17,3 +17,25 @@ CSS Selektory:
 ::before						uvnitř prvku, před obsahem
 ::after							uvnitř prvku, za obsahem
 */
+
+/* p::first-letter {
+	color: rebeccapurple;
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 1;
+	float: left;
+	margin-right: 5px;
+} */
+
+/* p::first-line {
+	color: red;
+} */
+
+h2::before {
+	content: "";
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: magenta;
+	display: inline-block;
+}
