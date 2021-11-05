@@ -23,3 +23,14 @@ html { box-sizing: border-box; }
 
 /* ---------------------------------------------------- */
 
+.kontejner {
+    display: grid;
+    grid-template-columns: 300px repeat(3, 1fr);
+    grid-template-rows: 200px 100px 150px;
+    gap: 15px;
+}
+
+/* .bobik {
+    grid-column: span 2 / -2;
+    grid-row: 2 / span 2;
+} */

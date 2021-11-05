@@ -26,5 +26,29 @@ nav {
 
 .grid {
 	height: 100vh; /* nastavíme výšku gridu přes celou stránku */
+	display: grid;
+	grid-template-columns: repeat(5, 20%);
+	grid-template-rows: repeat(4, 1fr);
 }
 
+header {
+	grid-column: 1 / -1;
+}
+
+footer {
+	grid-column: 1 / -1;
+	grid-row: -2 / -1;
+}
+
+article {
+	grid-column: span 3;
+	grid-row: span 2;
+}
+
+nav {
+	grid-row: span 2;
+}
+
+aside {
+	grid-row: span 2;
+}
