@@ -3,6 +3,7 @@
 
 body {
 	font-family: sans-serif;
+	margin: 0;
 }
 
 .sloupec {
@@ -18,3 +19,58 @@ body {
 
 /* ---------------------------------------------------- */
 
+.kontejner {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 200px repeat(3, auto) 100px;
+	grid-template-areas: 
+	"hlavicka hlavicka"
+	"obsah obsah"
+	"menu menu"
+	"reklama1 reklama2"
+	"paticka paticka";
+}
+
+.hlavicka {	grid-area: hlavicka; }
+
+.menu { grid-area: menu; }
+
+.obsah { grid-area: obsah; }
+
+.reklama1 { grid-area: reklama1; }
+
+.reklama2 { grid-area: reklama2; }
+
+.paticka { grid-area: paticka;}
+
+
+@media screen and (min-width: 768px) {
+	.kontejner {
+		grid-template-columns: 200px 1fr 1fr;
+		grid-template-rows: 200px auto auto 100px;
+
+		grid-template-areas: 
+		"hlavicka hlavicka hlavicka"
+		"menu obsah obsah"
+		"menu reklama1 reklama2"
+		"paticka paticka paticka";
+	}
+
+
+}
+
+
+@media screen and (min-width: 1000px) {
+	.kontejner {
+	grid-template-columns: 200px 1fr 250px;
+	grid-template-rows: 200px auto auto 100px;
+	grid-template-areas: 
+	"hlavicka hlavicka hlavicka"
+	"menu obsah reklama1"
+	"menu obsah reklama2"
+	"paticka paticka paticka";
+	}
+
+
+}

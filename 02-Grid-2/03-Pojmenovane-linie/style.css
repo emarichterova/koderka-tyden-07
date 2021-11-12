@@ -17,3 +17,32 @@ body {
 
 /* ---------------------------------------------------- */
 
+.kontejner {
+	display: grid;
+	grid-template-columns: 200px [obsah-start] 1fr [obsah-end] 250px;
+	grid-template-rows: 200px auto 100px;
+}
+
+.hlavicka {
+	grid-column: 1 / -1;
+}
+
+.levy {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.hlavni {
+	grid-column: obsah-start / obsah-end;
+	grid-row: 2;
+}
+
+.pravy {
+	grid-column: 3;
+	grid-row: 2;
+}
+
+.paticka {
+	grid-column: span 3;
+	grid-row: 3;
+}
